@@ -37,8 +37,18 @@ If the gate is not satisfied:
 - explain what information is needed to compare them
 - defer recommendation until evidence/analysis is sufficient
 
-Do not say that there will be no more PO questions. Instead use wording such as:
+Do not say or imply that all remaining information for the Story is complete while unresolved evidence search may still reveal material questions. Instead use wording such as:
 "For the current stage, these answers are sufficient. Code/document analysis may reveal additional material questions."
+
+## Technical fact vs technical decision
+
+Before TL escalation, distinguish:
+- **Technical fact**: discoverable current-state information such as field existence, storage location, current ownership, schema, API behavior, or code path.
+- **Technical decision**: a choice among viable implementation/architecture approaches.
+
+Technical facts remain Evidence-resolvable until relevant available implementation evidence is sufficiently investigated. If still unresolved, request technical confirmation and include what was already searched.
+
+Do not convert an unresolved technical fact into a proposed implementation change.
 
 ## TL escalation format
 
