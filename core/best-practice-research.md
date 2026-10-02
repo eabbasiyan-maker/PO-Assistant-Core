@@ -21,12 +21,25 @@ Do not search every connector blindly. Search only source categories that could 
 If internal sources are unavailable or authority cannot be established, record that limitation. This does not automatically justify external research unless the External Research Gate below is also satisfied.
 
 ## External Research Gate
-After the Internal Evidence Completion Gate, before automatic external research, answer:
-1. Have relevant internal product sources been searched?
-2. Is there a specific unresolved question that external evidence can materially inform?
-3. Is external research needed now for the next decision?
+After the Internal Evidence Completion Gate, automatic external research is allowed only if all of the following are explicitly identifiable:
 
-If any answer is no, defer automatic web research. Do not browse simply to make the analysis look complete.
+1. **External Question** — the exact unresolved question that requires external evidence.
+2. **Decision Impact** — the decision, Unknown, Story section, API/architecture choice, or risk assessment that could materially change based on the answer.
+3. Relevant internal product sources have already been searched sufficiently for that question.
+4. The external answer is needed now for the next analysis or decision step.
+
+If the **External Question** or **Decision Impact** cannot be stated clearly, do not browse automatically.
+
+Do not use web research for background color, examples, generic best practices, or to make the analysis look complete when it does not resolve a named external question.
+
+Before browsing, the workflow should be able to express:
+
+```
+External Question: ...
+Decision Impact: ...
+```
+
+If either field is empty, defer external research.
 
 Exceptions:
 - the PO explicitly asks for external/web/best-practice research; or
