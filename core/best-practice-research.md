@@ -11,15 +11,22 @@ Use external research when:
 
 Typical areas include API design, security, architecture, reliability, performance, concurrency, observability, AI systems, protocols, and UX patterns.
 
-## Ordering
-Normally:
-1. discover relevant internal product evidence;
-2. identify the unresolved question;
-3. research the external reference that can inform that question.
+## External Research Gate
+Before automatic external research, answer:
+1. Have relevant internal product sources been searched?
+2. Is there a specific unresolved question that external evidence can materially inform?
+3. Is external research needed now for the next decision?
 
-Research earlier only when the external fact itself is necessary to understand the requirement.
+If any answer is no, defer automatic web research.
 
-Do not use web research as a substitute for searching available product knowledge.
+Exceptions:
+- the PO explicitly asks for external/web/best-practice research; or
+- an external fact is itself necessary to understand the requirement.
+
+Default order:
+Internal Evidence → Unresolved Question → External Research → Applicability Check.
+
+Do not browse merely because the topic has known industry best practices. Do not use web research as a substitute for product knowledge.
 
 ## Source order
 Prefer:
