@@ -32,7 +32,13 @@ They may enter the current analysis only when:
 1. authoritative evidence establishes a real dependency or product-wide constraint; or
 2. the PO explicitly links the work.
 
-Otherwise label the relationship as an unverified possible dependency and keep it outside committed scope.
+Otherwise do not use it as a dependency, constraint, rationale, solution preference, Scope item, AC, or DoD item.
+
+Do not surface unrelated prior work just because it exists in memory or project history. Mention it only when:
+- evidence establishes a material relationship that the PO needs to know; or
+- the PO explicitly asks to compare/connect the requirements.
+
+If a possible relationship is genuinely material but unverified, label it **Possible dependency — not validated** and keep it outside committed scope.
 
 ## Cross-product analysis
 If explicitly requested:
@@ -47,3 +53,13 @@ Ask internally:
 - Is it approved/current evidence, or merely prior proposed/planned work?
 - Was cross-product or cross-requirement use explicitly requested where needed?
 - Have unapproved prior ideas stayed outside Scope and AC?
+
+
+## Requirement provenance
+For every material dependency or constraint introduced from prior work, be able to answer:
+- Which current requirement fact does it affect?
+- What source establishes the relationship?
+- Is that source approved/current?
+- Was the relationship explicit, or inferred?
+
+If these cannot be answered, remove the prior-work reference from the current analysis.
