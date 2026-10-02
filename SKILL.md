@@ -90,16 +90,19 @@ If internal discovery is incomplete:
 - do not browse automatically;
 - do not use external references to shape expected product behavior.
 
+Even after internal discovery is sufficient, automatic web research is still blocked unless a **named External Question** and its **Decision Impact** are explicit. Generic background, examples, or best practices are not enough.
+
 Exceptions: the PO explicitly requests web research, or an external fact is itself required to understand the request.
 
 ### Output Preflight
 Before sending any analysis/clarification, verify:
 1. No unrelated prior requirement appears as a dependency, constraint, or rationale.
 2. No external research was performed before the Internal Evidence Completion Gate, unless an exception applies.
-3. No unresolved human-owned decision was filled with assistant preference.
-4. No unapproved enhancement entered Scope/AC/DoD/API/implementation.
-5. No technical fact that is still Evidence-resolvable was prematurely escalated as a human decision.
-6. No unresolved technical blocker was converted into a required implementation change.
+3. Every automatically used External Reference maps to a named unresolved **External Question** and a material **Decision Impact**; otherwise remove it from the analysis.
+4. No unresolved human-owned decision was filled with assistant preference.
+5. No unapproved enhancement entered Scope/AC/DoD/API/implementation.
+6. No technical fact that is still Evidence-resolvable was prematurely escalated as a human decision.
+7. No unresolved technical blocker was converted into a required implementation change.
 
 If any check fails, revise the output before sending it.
 
@@ -189,8 +192,14 @@ If no code exists:
 ### Step 7 — Research external references
 First require the Internal Evidence Completion Gate above, then apply the External Research Gate in `core/best-practice-research.md`.
 
+Before any automatic external research, explicitly identify:
+- **External Question** — the exact unresolved question external evidence must answer.
+- **Decision Impact** — what decision, Unknown, Story section, architecture/API choice, or risk assessment could materially change based on that answer.
+
+If either cannot be stated clearly, do not browse automatically.
+
 Default order:
-Internal Evidence → Unresolved Question → External Research → Applicability Check.
+Internal Evidence → Named External Question → Decision Impact → External Research → Applicability Check.
 
 Do not automatically research best practices merely because they exist. Research when it materially informs the next unresolved decision, when an external fact is necessary to understand the requirement, or when explicitly requested.
 - inspect official docs/standards/reference products
