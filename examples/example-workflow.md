@@ -8,28 +8,36 @@
 ### 1. توضیح ساده
 نیاز این است که اگر یک درخواست به دلیل retry دوباره ارسال شد، سیستم همان عملیات را دوباره انجام ندهد و نتیجه قابل پیش‌بینی داشته باشد.
 
-### 2. Clarification
-قبل از Story نهایی باید مشخص شود:
-- شناسه یکتای درخواست داریم یا باید اضافه شود؟
-- رفتار مورد انتظار برای retry موفق چیست؟
-- چه مدت باید درخواست قبلی قابل شناسایی باشد؟
+### 2. Evidence discovery first
+قبل از سؤال از PO:
+- Product Knowledge و API contract مرتبط بررسی می‌شود.
+- Source authority برای repository/branch مرتبط بررسی می‌شود.
+- مسیر request تا persistence/integration trace می‌شود.
+- مشخص می‌شود آیا request identifier، idempotency mechanism یا retry behavior فعلی وجود دارد.
 
-### 3. Code investigation
-Assistant مسیر API تا persistence/integration را بررسی می‌کند و محل مناسب برای کنترل تکرار را پیدا می‌کند.
+موارد پیدا نشده فقط به شکل «در منابع بررسی‌شده مشاهده نشد» گزارش می‌شوند.
 
-### 4. Best practice
-برای مفهوم idempotency، official/reference material بررسی می‌شود و لینک داده می‌شود.
+### 3. Route remaining unknowns
+مثال:
+- وجود شناسه یکتای فعلی → Evidence-resolvable
+- رفتار محصول برای retry موفق → PO Decision اگر قبلاً تصویب نشده
+- محل enforcement → Technical Decision اگر از معماری موجود قطعی نشود
+- الگوهای استاندارد idempotency → External Reference
+- جزئیات غیرضروری برای این مرحله → Non-blocking Unknown
 
-### 5. Options
-در صورت وجود چند راه:
-- application-level idempotency store
-- database uniqueness/transaction control
-- upstream/gateway enforcement
+### 4. Clarification
+فقط تصمیم‌های حل‌نشده و لازم از مالک درست پرسیده می‌شوند. گزینه‌ها خنثی بیان می‌شوند؛ Assistant رفتار ترجیحی خودش را جای تصمیم PO/TL نمی‌گذارد.
 
-هر کدام با Cost/Benefit/Risk مقایسه می‌شود.
+### 5. Best practice
+در صورت نیاز، official/reference material برای idempotency بررسی می‌شود. External practice به‌عنوان Product Evidence تلقی نمی‌شود.
 
-### 6. Recommendation
+### 6. Options
+در صورت وجود چند راه معتبر، حداکثر سه گزینه با Cost/Benefit/Risk/Trade-off مقایسه می‌شوند.
+
+### 7. Recommendation
+فقط بعد از پاس شدن Recommendation Gate و حل Decision Dependencies:
+
 **Recommendation — requires human approval**
 
-### 7. Final story
-Story شامل Scope، Not in Scope، AC، Test Recommendations، Code References، Impact، Risk و DoD است.
+### 8. Final story
+فقط بعد از کافی بودن Evidence و تصمیم‌ها. Story شامل Scope، Not in Scope، AC، Test Recommendations، validated Code References، Impact، Risk و DoD است. Proposed Enhancements تأییدنشده وارد Story نمی‌شوند.
