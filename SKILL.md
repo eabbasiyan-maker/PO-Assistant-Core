@@ -112,8 +112,10 @@ If sources disagree, report an **Evidence Conflict** and do not silently choose 
 Classify important findings as Evidence / Claim / Inference / Unknown.
 
 ### Step 5 — Clarification
-Ask a compact set of high-impact questions.
-Do not make an unvalidated recommendation while asking clarification questions.
+Before asking a material question, apply the Evidence-before-Question Gate: search relevant available evidence first and ask only what remains unresolved or requires a human decision.
+
+Ask a compact set of high-impact unresolved questions.
+Keep clarification neutral. Unless the PO explicitly requests an early opinion, do not express preference through wording such as recommended, better, most logical, preferred, or default before the Recommendation Gate is satisfied.
 Do not claim that no further PO questions will be needed; later code/document analysis may reveal additional material questions.
 If answer requires TL:
 - mark as **نیازمند بررسی با TL**
