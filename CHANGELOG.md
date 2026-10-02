@@ -1,5 +1,21 @@
 # Changelog
 
+## v1.0.6 — Hard enforcement of isolation and research gates
+
+### Added
+- Mandatory Requirement Isolation Gate before using prior same-product context.
+- Mandatory Internal Evidence Completion Gate before automatic external research.
+- Output Preflight that rejects context leakage, premature external research, assistant-filled human decisions, and silent scope expansion.
+- Requirement provenance check for dependencies/constraints imported from prior work.
+
+### Changed
+- Empty GitHub Code Search no longer counts as completed internal discovery when other relevant internal sources are available.
+- Unrelated prior work should not even be surfaced unless a material relationship is evidenced or explicitly requested.
+- External research is blocked rather than merely discouraged until internal discovery is sufficient, except for explicit research requests or externally-defined facts required to understand the request.
+
+### Reason
+Cold-start retest repeated two v1.0.5 failures: unrelated QC/Audit context leaked into a new History Retention requirement, and OpenAI research occurred after only a GitHub search. The prior rules were advisory enough to be ignored, so v1.0.6 converts them into preflight gates.
+
 ## v1.0.5 — Requirement isolation and research sequencing
 
 ### Added
