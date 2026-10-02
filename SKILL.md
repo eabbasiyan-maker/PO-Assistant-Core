@@ -95,15 +95,19 @@ Check only relevant dimensions:
 
 Do not add sections that have no value.
 
-### Step 4 — Gather evidence
-Inspect available:
-- product knowledge
-- source code
-- APIs
-- docs
-- logs
-- run/test evidence
-- human statements
+### Step 4 — Discover and validate evidence
+Search relevant available product sources, not only Git and not every connector blindly. Relevant sources may include product/project knowledge, source code, architecture/design docs, APIs, approved requirements/decisions, logs, runs, tests, and relevant connected document stores.
+
+Before using a material source as authoritative, assess:
+- Authority
+- Freshness
+- Applicability to the active product/version/environment
+
+For code, identify repository + branch/tag/commit where possible.
+
+If authority is not confirmed, label it **Source found — authority not confirmed**.
+
+If sources disagree, report an **Evidence Conflict** and do not silently choose one.
 
 Classify important findings as Evidence / Claim / Inference / Unknown.
 
@@ -118,6 +122,8 @@ If answer requires TL:
 - state which decision is blocked
 
 ### Step 6 — Investigate code
+First apply the Source Validation Gate in `core/evidence-policy.md`. A found repository or branch is not automatically the Source of Truth.
+
 For technical stories:
 - trace relevant code path
 - identify affected components
@@ -144,8 +150,12 @@ If more than one credible solution exists, compare up to three using:
 - trade-off
 - compatibility with current architecture
 
-Before recommending, apply the Recommendation Gate defined in `core/solution-analysis.md`.
-If the gate is not satisfied, present the options neutrally and state what evidence is still needed.
+Before recommending, apply the Recommendation Gate and Decision Dependency Gate defined in `core/solution-analysis.md`.
+If a PO/TL/Architect decision can materially change the solution, do not issue a validated recommendation until it is resolved.
+
+Apply the Scope Expansion Gate to assistant-discovered additions. Do not silently add unapproved enhancements to Scope, AC, DoD, API contract, or implementation plan.
+
+If the gates are not satisfied, present the options neutrally and state what evidence or decision is still needed.
 
 After the gate is satisfied, provide:
 **Recommendation — requires human approval**
