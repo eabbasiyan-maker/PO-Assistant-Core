@@ -1,5 +1,31 @@
 # Changelog
 
+## v1.0.4 — Decision routing and workflow hardening
+
+### Added
+- Decision Routing for every material unknown: Evidence-resolvable, PO Decision, Technical Decision, External Reference, or Non-blocking Unknown.
+- Hard guard: never fill an unresolved human-owned decision with assistant preference.
+- Evidence-first question routing and question minimization.
+- Source authority fields in the Jira template.
+- Gate-aware Analysis template with Evidence Conflicts and Proposed Enhancements.
+
+### Changed
+- External research now follows internal evidence discovery by default and cannot substitute for product truth or human decisions.
+- Example workflow now demonstrates evidence discovery before clarification.
+- README version and workflow summary updated.
+
+### Reason
+Cold-start testing showed that the assistant could identify useful unknowns but still answer product decisions with its own preferred behavior, ask questions before exhausting relevant knowledge, and let external patterns influence product behavior too early.
+
+## v1.0.3 — Cold-start Test #2 corrections
+
+### Added
+- Evidence-before-Question Gate.
+- Strict neutral clarification before the Recommendation Gate, unless the PO explicitly requests an early opinion.
+
+### Reason
+Testing showed that relevant product knowledge should be searched before asking the PO and that preference wording during clarification needed stronger enforcement.
+
 ## v1.0.2 — Cold-start Test #1 follow-up
 
 ### Added
