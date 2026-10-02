@@ -1,5 +1,18 @@
 # Changelog
 
+## v1.0.2 — Cold-start Test #1 follow-up
+
+### Added
+- Decision Dependency Gate.
+- Scope Expansion Gate.
+- Source Validation Gate using Authority, Freshness, and Applicability.
+- Knowledge Discovery beyond Git, limited to relevant available sources.
+- Evidence Conflict handling for disagreements between code, documents, and other product knowledge.
+- Rule that absence from a searched snapshot is not proof of absence from the product.
+
+### Reason
+Testing showed that source authority, knowledge discovery, unresolved human decisions, and unapproved scope additions need explicit workflow gates.
+
 ## v1.0.1 — Cold-start Test #1 corrections
 
 ### Changed
