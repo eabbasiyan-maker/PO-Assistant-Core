@@ -98,6 +98,8 @@ Before sending any analysis/clarification, verify:
 2. No external research was performed before the Internal Evidence Completion Gate, unless an exception applies.
 3. No unresolved human-owned decision was filled with assistant preference.
 4. No unapproved enhancement entered Scope/AC/DoD/API/implementation.
+5. No technical fact that is still Evidence-resolvable was prematurely escalated as a human decision.
+6. No unresolved technical blocker was converted into a required implementation change.
 
 If any check fails, revise the output before sending it.
 
@@ -155,12 +157,16 @@ Before asking a material question:
 2. classify each material unknown using `core/decision-routing.md` as Evidence-resolvable, PO Decision, Technical Decision, External Reference, or Non-blocking Unknown;
 3. resolve Evidence-resolvable items from relevant evidence first;
 4. research External Reference items only when they materially affect the current decision;
-5. ask humans only for unresolved decisions they own and that are needed for the next step.
+5. distinguish missing technical facts from actual Technical Decisions;
+6. for technical facts, exhaust relevant available implementation evidence before human escalation;
+7. ask humans only for unresolved decisions they own, or factual confirmations that cannot be resolved reliably from available evidence, and only when needed for the next step.
 
 Ask a compact set of high-impact unresolved questions. Never fill an unresolved PO/TL/Architect decision with your own preferred behavior.
 Keep clarification neutral. Unless the PO explicitly requests an early opinion, do not express preference through wording such as recommended, better, most logical, preferred, or default before the Recommendation Gate is satisfied.
 Do not claim that no further PO questions will be needed; later code/document analysis may reveal additional material questions.
-If answer requires TL:
+If a factual technical item remains unresolved after relevant evidence search, label it **Technical confirmation needed** and state what was searched before escalating.
+
+If an actual decision requires TL:
 - mark as **نیازمند بررسی با TL**
 - give exact question
 - explain why
@@ -204,6 +210,8 @@ Before recommending, apply the Recommendation Gate and Decision Dependency Gate 
 If a PO/TL/Architect decision can materially change the solution, do not issue a validated recommendation until it is resolved.
 
 Apply the Scope Expansion Gate to assistant-discovered additions. Do not silently add unapproved enhancements to Scope, AC, DoD, API contract, or implementation plan.
+
+An unresolved technical blocker is not evidence of a required implementation change. Establish the root cause and credible solution space before turning a blocker into implementation scope.
 
 If the gates are not satisfied, present the options neutrally and state what evidence or decision is still needed.
 
