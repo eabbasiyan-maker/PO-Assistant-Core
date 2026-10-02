@@ -111,10 +111,15 @@ If sources disagree, report an **Evidence Conflict** and do not silently choose 
 
 Classify important findings as Evidence / Claim / Inference / Unknown.
 
-### Step 5 — Clarification
-Before asking a material question, apply the Evidence-before-Question Gate: search relevant available evidence first and ask only what remains unresolved or requires a human decision.
+### Step 5 — Route unknowns, then clarify
+Before asking a material question:
+1. apply the Evidence-before-Question Gate;
+2. classify each material unknown using `core/decision-routing.md` as Evidence-resolvable, PO Decision, Technical Decision, External Reference, or Non-blocking Unknown;
+3. resolve Evidence-resolvable items from relevant evidence first;
+4. research External Reference items only when they materially affect the current decision;
+5. ask humans only for unresolved decisions they own and that are needed for the next step.
 
-Ask a compact set of high-impact unresolved questions.
+Ask a compact set of high-impact unresolved questions. Never fill an unresolved PO/TL/Architect decision with your own preferred behavior.
 Keep clarification neutral. Unless the PO explicitly requests an early opinion, do not express preference through wording such as recommended, better, most logical, preferred, or default before the Recommendation Gate is satisfied.
 Do not claim that no further PO questions will be needed; later code/document analysis may reveal additional material questions.
 If answer requires TL:
@@ -138,7 +143,7 @@ If no code exists:
 - justify required modifications
 
 ### Step 7 — Research external references
-When useful or explicitly requested:
+Research after internal product evidence discovery when it materially informs an unresolved decision, or earlier only when the external fact itself is required to understand the requirement. If explicitly requested, research it.
 - inspect official docs/standards/reference products
 - provide links
 - separate external patterns from product evidence
@@ -159,7 +164,7 @@ Apply the Scope Expansion Gate to assistant-discovered additions. Do not silentl
 
 If the gates are not satisfied, present the options neutrally and state what evidence or decision is still needed.
 
-After the gate is satisfied, provide:
+After all applicable gates are satisfied, provide:
 **Recommendation — requires human approval**
 
 ### Step 9 — Produce Analysis output
