@@ -11,13 +11,22 @@ Use external research when:
 
 Typical areas include API design, security, architecture, reliability, performance, concurrency, observability, AI systems, protocols, and UX patterns.
 
+## Internal Evidence Completion Gate
+Automatic external research is blocked until relevant internal discovery is sufficiently attempted for the current question.
+
+A repository lookup or keyword search alone is not enough when other relevant internal sources are available. Depending on the question, inspect relevant Product Pack/project knowledge, architecture/API docs, validated code paths, approved decisions, logs/runs/tests, or internal document stores.
+
+Do not search every connector blindly. Search only source categories that could materially answer the current question.
+
+If internal sources are unavailable or authority cannot be established, record that limitation. This does not automatically justify external research unless the External Research Gate below is also satisfied.
+
 ## External Research Gate
-Before automatic external research, answer:
+After the Internal Evidence Completion Gate, before automatic external research, answer:
 1. Have relevant internal product sources been searched?
 2. Is there a specific unresolved question that external evidence can materially inform?
 3. Is external research needed now for the next decision?
 
-If any answer is no, defer automatic web research.
+If any answer is no, defer automatic web research. Do not browse simply to make the analysis look complete.
 
 Exceptions:
 - the PO explicitly asks for external/web/best-practice research; or
