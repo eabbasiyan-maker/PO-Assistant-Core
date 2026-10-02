@@ -13,7 +13,7 @@ Reusable, evidence-first framework for Product Owners to analyze requirements an
 - Use external best-practice research when it adds value or when the PO explicitly requests it.
 - Compare up to three viable solutions and provide a recommendation that still requires human approval.
 - Produce both a readable analysis and a concise Jira story.
-- Preserve product context isolation.
+- Preserve product context isolation and isolate concurrent requirements within the same product.
 
 ## Core output
 
@@ -44,4 +44,4 @@ One PO may own multiple products. Each product gets its own **Product Pack**. Pr
 
 ## Version
 
-Current baseline: **v1.0.4**
+Current baseline: **v1.0.5**
