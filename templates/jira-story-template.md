@@ -53,6 +53,8 @@ ACها باید روشن، قابل مشاهده و قابل Verify باشند.
 
 ## Technical / Code References
 - Repository/Module:
+- Branch/Tag/Commit:
+- Source authority status:
 - File/Class/Method:
 - Related flow:
 - اگر کد هنوز وجود ندارد: صریحاً ذکر شود.
@@ -73,5 +75,9 @@ ACها باید روشن، قابل مشاهده و قابل Verify باشند.
 
 ## Human Decisions
 - Decision:
+- Owner:
+- Status: approved / unresolved
 - Approved by:
 - Reason:
+
+Unapproved Proposed Enhancements must not be copied into Scope, AC, DoD, or implementation details.
