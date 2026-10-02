@@ -7,6 +7,7 @@ Reusable, evidence-first framework for Product Owners to analyze requirements an
 - Reuse one PO workflow across different products and teams.
 - Keep **PO Core** separate from each product's knowledge.
 - Require evidence for factual claims.
+- Search relevant evidence before asking the PO questions, then route unresolved decisions to the correct owner.
 - Ask targeted clarification questions without getting stuck in an endless question loop.
 - Review relevant code paths when code exists.
 - Use external best-practice research when it adds value or when the PO explicitly requests it.
@@ -32,7 +33,7 @@ Every final story must include:
 ## Repository structure
 
 - `SKILL.md` — entry point and execution rules
-- `core/` — reusable PO analysis rules
+- `core/` — reusable PO analysis rules, including evidence validation, decision routing, scope control, and solution gates
 - `templates/` — reusable output and onboarding templates
 - `examples/` — example usage
 - `CHANGELOG.md` — version history
@@ -43,4 +44,4 @@ One PO may own multiple products. Each product gets its own **Product Pack**. Pr
 
 ## Version
 
-Current baseline: **v1.0.0**
+Current baseline: **v1.0.4**
