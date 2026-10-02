@@ -10,7 +10,7 @@ Reusable, evidence-first framework for Product Owners to analyze requirements an
 - Search relevant evidence before asking the PO questions, then route unresolved decisions to the correct owner.
 - Ask targeted clarification questions without getting stuck in an endless question loop.
 - Review relevant code paths when code exists.
-- Use external best-practice research when it adds value or when the PO explicitly requests it.
+- Complete relevant internal evidence discovery before automatic external best-practice research, unless an explicit exception applies.
 - Compare up to three viable solutions and provide a recommendation that still requires human approval.
 - Produce both a readable analysis and a concise Jira story.
 - Preserve product context isolation and isolate concurrent requirements within the same product.
@@ -44,4 +44,4 @@ One PO may own multiple products. Each product gets its own **Product Pack**. Pr
 
 ## Version
 
-Current baseline: **v1.0.5**
+Current baseline: **v1.0.6**
