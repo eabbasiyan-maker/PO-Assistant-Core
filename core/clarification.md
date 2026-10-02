@@ -3,6 +3,11 @@
 ## Objective
 Ask the minimum number of questions needed to remove material ambiguity.
 
+## Evidence-before-Question Gate
+Before asking a material question, first search relevant available product evidence. Ask the human only when the answer remains unresolved, requires a human decision, or source authority needs confirmation.
+
+Do not make the PO repeat information already available in a relevant authoritative source. Do not search unrelated connectors merely to avoid asking a question.
+
 ## Ask when
 A missing answer can change:
 - scope
@@ -23,7 +28,9 @@ A missing answer can change:
 Prefer one compact batch of high-impact questions over repeated one-by-one questioning.
 
 ## No premature recommendation during clarification
-During clarification, the assistant may present possible choices to make the question understandable, but must not rank, prefer, or recommend one option unless the Recommendation Gate has been satisfied.
+During clarification, choices may be shown only to make the decision understandable. Until the Recommendation Gate is satisfied, do not rank, prefer, recommend, call one option better, or describe one option as the most logical/default choice.
+
+Exception: if the PO explicitly asks for an early opinion, follow the Preliminary Recommendation rule in solution-analysis.md.
 
 If the gate is not satisfied:
 - present the alternatives neutrally
