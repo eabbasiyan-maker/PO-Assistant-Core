@@ -1,5 +1,20 @@
 # Changelog
 
+## v1.0.5 — Requirement isolation and research sequencing
+
+### Added
+- Requirement Context Isolation: same product does not imply that prior stories, planned features, or proposed designs belong to the current requirement.
+- Leakage check for cross-requirement dependencies and constraints.
+- External Research Gate with default order: Internal Evidence → Unresolved Question → External Research → Applicability Check.
+- Requirement-boundary fields in the Analysis template.
+
+### Changed
+- Prior same-product work can affect a new requirement only when authoritative evidence establishes the dependency/constraint or the PO explicitly links it.
+- Automatic best-practice research is deferred until it can materially inform a specific unresolved decision.
+
+### Reason
+Cold-start testing showed same-product context leakage through unrelated QC/Audit work and external research occurring before internal evidence discovery was complete.
+
 ## v1.0.4 — Decision routing and workflow hardening
 
 ### Added
