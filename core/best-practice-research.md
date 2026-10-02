@@ -1,20 +1,25 @@
 # Best-Practice Research
 
-## Trigger automatically when useful
-Especially for:
-- API design
-- security
-- architecture
-- reliability
-- performance
-- concurrency
-- observability
-- AI systems
-- protocols
-- UX patterns
+## Purpose
+External research informs product decisions; it does not replace product evidence or human decision ownership.
 
-## Explicit override
-If the PO explicitly asks for web/best-practice research, perform it even if automatic triggering would not select it.
+## Trigger
+Use external research when:
+- an external fact, provider behavior, standard, or industry pattern materially affects the decision;
+- internal evidence leaves a meaningful design question where external comparison adds value;
+- the PO explicitly requests research.
+
+Typical areas include API design, security, architecture, reliability, performance, concurrency, observability, AI systems, protocols, and UX patterns.
+
+## Ordering
+Normally:
+1. discover relevant internal product evidence;
+2. identify the unresolved question;
+3. research the external reference that can inform that question.
+
+Research earlier only when the external fact itself is necessary to understand the requirement.
+
+Do not use web research as a substitute for searching available product knowledge.
 
 ## Source order
 Prefer:
@@ -30,4 +35,4 @@ For every useful external finding:
 - applicability to current product
 - limitation or mismatch
 
-External practice is a reference, not product evidence.
+External practice is **External Reference**, not product Evidence. It may inform options, but it must not decide an unresolved PO/TL/Architect choice.
