@@ -1,5 +1,24 @@
 # Changelog
 
+## v1.0.7 — Evidence-resolvable escalation guard
+
+### Added
+- Explicit distinction between missing technical facts and actual Technical Decisions.
+- Evidence-resolvable escalation guard: inspect relevant implementation evidence before asking TL/Developer/Architect for a factual answer.
+- **Technical confirmation needed** state for unresolved technical facts after evidence search.
+- Guard preventing unresolved technical blockers from becoming implementation Scope/AC/DoD/API changes.
+- Output preflight checks for premature technical escalation and blocker-to-scope conversion.
+
+### Changed
+- Technical Decision now means an actual technical choice after relevant facts are established.
+- Clarification must not imply that all Story information is complete while evidence discovery can still reveal material questions.
+
+### Compatibility validation
+Changes were staged on `test/v1.0.7-routing-guard` before main. Diff against v1.0.6 touched only `SKILL.md`, `core/clarification.md`, and `core/decision-routing.md`. Existing guards for human decision ownership, requirement isolation, external research ordering, recommendation, and scope control remained present.
+
+### Reason
+Cold-start testing showed that a missing implementation fact such as whether `botId` is already available could be escalated to TL too early and then incorrectly converted into required implementation scope.
+
 ## v1.0.6 — Hard enforcement of isolation and research gates
 
 ### Added
