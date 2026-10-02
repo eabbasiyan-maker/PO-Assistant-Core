@@ -1,7 +1,6 @@
 # Analysis Template
 
 ## 1. توضیح خیلی ساده
-در چند خط و بدون اصطلاحات اضافه توضیح بده:
 - الان مسئله چیست؟
 - چه چیزی می‌خواهیم تغییر کند؟
 - چرا این تغییر مهم است؟
@@ -11,23 +10,36 @@
 - کاربر/ذی‌نفع:
 - نتیجه مورد انتظار:
 
-## 3. وضعیت فعلی
+## 3. منابع بررسی‌شده و اعتبار
+| منبع | Authority | Freshness | Applicability | نتیجه |
+|---|---|---|---|---|
+
+اگر Authority مشخص نیست، صریحاً ثبت شود.
+
+## 4. وضعیت فعلی
 - رفتار فعلی:
 - Evidence:
 - Code Reference:
 - Unknowns:
 
-## 4. رفتار مورد انتظار
+## 5. رفتار مورد انتظار
+- موارد تأییدشده:
+- تصمیم‌های باز:
+
+## 6. Scope
+- Requirement-derived:
+- Required technical consequences:
+
+### Proposed Enhancements — requires PO approval
+فقط موارد خارج از نیاز اصلی. تا زمان تأیید وارد Scope قطعی نشوند.
+
+## 7. Not in Scope
 - ...
 
-## 5. Scope
-- ...
-
-## 6. Not in Scope
-- ...
-
-## 7. سؤال‌ها / ابهام‌های مهم
-- ...
+## 8. Unknown / Decision Routing
+| مورد | نوع | مالک/منبع حل | Blocker؟ | وضعیت |
+|---|---|---|---|---|
+| | Evidence-resolvable / PO Decision / Technical Decision / External Reference / Non-blocking | | | |
 
 ### نیازمند بررسی با TL
 در صورت نیاز:
@@ -35,13 +47,21 @@
 - دلیل:
 - تصمیم وابسته:
 
-## 8. Best Practice / External References
+## 9. Evidence Conflicts
+فقط در صورت وجود:
+- Source A:
+- Source B:
+- اثر روی تصمیم:
+- نیاز به تأیید:
+
+## 10. Best Practice / External References
 فقط اگر مرتبط یا صراحتاً درخواست شده:
 - Reference:
 - نکته:
 - میزان انطباق با محصول:
+- محدودیت:
 
-## 9. گزینه‌های راه‌حل
+## 11. گزینه‌های راه‌حل
 در صورت وجود چند گزینه معتبر، حداکثر سه گزینه.
 
 | مورد | گزینه A | گزینه B | گزینه C |
@@ -53,19 +73,24 @@
 | Trade-off | | | |
 | Compatibility | | | |
 
-## 10. Recommendation — requires human approval
+## 12. Recommendation
+فقط اگر Recommendation Gate و Decision Dependency Gate پاس شده‌اند:
+
+**Recommendation — requires human approval**
 - پیشنهاد:
 - دلیل:
 - شرایطی که می‌تواند تصمیم را تغییر دهد:
 - تأیید موردنیاز:
 
-## 11. Impact & Dependencies
+اگر Gate پاس نشده، Recommendation تولید نشود و فقط blocker/decision dependency نوشته شود.
+
+## 13. Impact & Dependencies
 - ...
 
-## 12. Risks / Unknowns
+## 14. Risks / Unknowns
 - ...
 
-## 13. Evidence Summary
+## 15. Evidence Summary
 - Evidence:
 - Claim:
 - Inference:
