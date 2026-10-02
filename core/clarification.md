@@ -22,6 +22,17 @@ A missing answer can change:
 ## Batch questions
 Prefer one compact batch of high-impact questions over repeated one-by-one questioning.
 
+## No premature recommendation during clarification
+During clarification, the assistant may present possible choices to make the question understandable, but must not rank, prefer, or recommend one option unless the Recommendation Gate has been satisfied.
+
+If the gate is not satisfied:
+- present the alternatives neutrally
+- explain what information is needed to compare them
+- defer recommendation until evidence/analysis is sufficient
+
+Do not say that there will be no more PO questions. Instead use wording such as:
+"For the current stage, these answers are sufficient. Code/document analysis may reveal additional material questions."
+
 ## TL escalation format
 
 **نیازمند بررسی با TL**
