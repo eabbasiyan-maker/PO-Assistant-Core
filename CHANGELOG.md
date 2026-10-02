@@ -1,5 +1,22 @@
 # Changelog
 
+## v1.0.8 — Named External Question gate
+
+### Added
+- Mandatory **External Question** before automatic web/best-practice research.
+- Mandatory **Decision Impact** mapping showing which decision, Unknown, Story section, architecture/API choice, or risk assessment could materially change from external evidence.
+- Output preflight check removing automatically used External References that do not map to a named unresolved external question and material impact.
+
+### Changed
+- Generic background research, examples, and best-practice browsing no longer satisfy the External Research Gate.
+- Default research order is now: Internal Evidence → Named External Question → Decision Impact → External Research → Applicability Check.
+
+### Compatibility validation
+Changes were staged on `test/v1.0.8-external-question-gate` before main. The branch was 2 commits ahead and 0 behind main and touched only `SKILL.md` and `core/best-practice-research.md`. Regression checks confirmed that Requirement Isolation, Internal Evidence Completion, human decision ownership, technical-fact routing, blocker-to-scope protection, Recommendation Gate, and Scope Expansion Gate remain intact.
+
+### Reason
+Two independent Chat Server cold-start tests showed the same failure pattern: internal evidence was still incomplete, yet external sources were used for generic messaging/pagination background that did not resolve a named external question or affect the next decision.
+
 ## v1.0.7 — Evidence-resolvable escalation guard
 
 ### Added
