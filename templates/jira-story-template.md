@@ -1,83 +1,106 @@
-# Jira Story Template
+# Adaptive Jira Issue Template
 
-## عنوان
+Use this template only after applying `core/issue-type-routing.md`.
+
+## Issue Type
+- Explicit / Detected:
+- Confidence / ambiguity, only when relevant:
+
+## Common header
+### عنوان
 کوتاه، روشن و نتیجه‌محور.
 
-## توضیح ساده نیاز
-در چند خط و غیر فنی توضیح بده چه چیزی لازم است و چرا.
+### توضیح ساده
+فقط توضیحی که برای فهم Issue لازم است.
 
-## وضعیت فعلی (Current Behavior)
-- رفتار فعلی:
-- Evidence:
-- Code Reference:
+---
 
-## رفتار مورد انتظار (Expected Behavior)
-- ...
+## User Story / Feature
+Use relevant sections:
+- Current Behavior
+- Expected Behavior
+- Scope
+- Not in Scope
+- Acceptance Criteria
+- Test Recommendations
+- Technical / Code References
+- Impact & Dependencies
+- Risks / Unknowns
+- Definition of Done
+- Human Decisions
 
-## Scope
-- ...
-- ...
+## Bug
+Use relevant sections:
+- Problem Summary
+- Actual Behavior
+- Expected Behavior
+- Reproduction / Trigger Conditions
+- Environment / Version
+- Evidence
+- Impact
+- Acceptance / Fix Verification Criteria
+- Regression Test Recommendations
+- Technical / Code References
+- Risks / Unknowns
+- Definition of Done
 
-## Not in Scope
-- ...
-- ...
+Do not invent Severity or Priority.
 
-## Acceptance Criteria
-1. ...
-2. ...
-3. ...
+## Technical Debt
+Use relevant sections:
+- Current Technical Problem
+- Evidence / Technical References
+- Why It Matters / Impact
+- Scope
+- Not in Scope
+- Expected Technical Outcome
+- Acceptance / Verification Criteria
+- Regression / Compatibility Risks
+- Test Recommendations
+- Definition of Done
+- Open Technical Decisions
 
-ACها باید روشن، قابل مشاهده و قابل Verify باشند.
+## Spike / Investigation
+Use relevant sections:
+- Question / Objective
+- Why the Investigation Is Needed
+- Investigation Scope
+- Evidence / Sources to Inspect
+- Questions / Hypotheses
+- Expected Deliverable
+- Exit Criteria
+- Timebox only when provided/decided
+- Risks / Unknowns
+- Follow-up Decisions
 
-## پیشنهاد تست (Test Recommendations)
-فقط دسته‌های مرتبط را بیاور.
+## Task
+Use relevant sections:
+- Objective
+- Scope / Work Required
+- Deliverable
+- Dependencies
+- Verification / Done Criteria
+- Risks / Unknowns
 
-### Functional / Happy Path
-- ...
+## Job Story
+Use relevant sections:
+- Situation
+- Motivation
+- Expected Outcome
+- Current Context
+- Scope
+- Acceptance Criteria
+- Test Recommendations
+- Dependencies / Risks
+- Definition of Done
 
-### Negative / Error
-- ...
+---
 
-### Boundary / Edge Case
-- ...
-
-### Regression
-- ...
-
-### Integration / Compatibility
-- ...
-
-### Security / Performance / Concurrency / Data
-فقط در صورت ارتباط:
-- ...
-
-## Technical / Code References
-- Repository/Module:
-- Branch/Tag/Commit:
-- Source authority status:
-- File/Class/Method:
-- Related flow:
-- اگر کد هنوز وجود ندارد: صریحاً ذکر شود.
-
-## Impact & Dependencies
-- ...
-
-## Risks / Unknowns
-- ...
-
-## Definition of Done
-
-### Core DoD
-- ...
-
-### Product-specific DoD
-- ...
-
-## Human Decisions
-- Decision:
-- Owner:
-- Status: approved / unresolved
-- Approved by:
-- Reason:
-
-Unapproved Proposed Enhancements must not be copied into Scope, AC, DoD, or implementation details.
+## Shared rules
+- Do not print empty or irrelevant sections.
+- AC/verification criteria must be specific and observable.
+- Test Recommendations are not duplicates of AC.
+- Include Source authority/access information when source-based claims are material.
+- Keep unapproved Proposed Enhancements outside Scope, AC, DoD, API, and implementation.
+- Keep unresolved human decisions explicit.
+- Product-specific Jira conventions may extend the selected template without weakening Core guards.

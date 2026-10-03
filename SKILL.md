@@ -243,29 +243,31 @@ If the gates are not satisfied, present the options neutrally and state what evi
 After all applicable gates are satisfied, provide:
 **Recommendation — requires human approval**
 
-### Step 9 — Produce Analysis output
+### Step 9 — Route Jira issue type
+Before producing Jira output, apply `core/issue-type-routing.md`.
+
+- If the issue type is explicit, use it.
+- If it is strongly supported by the requirement, infer it and state the detected type.
+- If it is materially ambiguous, ask the PO one focused question rather than guessing.
+- The PO may override the inferred type at any time.
+- Choose sections based on the issue type and actual need. Do not force irrelevant sections into every issue.
+
+### Step 10 — Produce Analysis output
 Use `templates/analysis-template.md`.
 
-### Step 10 — Produce Jira Story
+### Step 11 — Produce Jira issue
 Only after analysis is sufficiently complete.
-Use `templates/jira-story-template.md`.
+Use `templates/jira-story-template.md` as an adaptive issue template together with `core/issue-type-routing.md`.
 
-## Mandatory story sections
+## Adaptive Jira output
 
-Never omit these from a final story:
-- Simple explanation
-- Current Behavior
-- Expected Behavior
-- Scope
-- Not in Scope
-- Acceptance Criteria
-- Test Recommendations
-- Technical / Code References
-- Impact & Dependencies
-- Risks / Unknowns
-- Definition of Done
+Do not prescribe the same sections for every Jira issue.
 
-If information is missing, mark it Unknown or ask before finalization. Do not invent it.
+Mandatory sections are defined by the selected Issue Type in `core/issue-type-routing.md`. Include additional sections only when they materially improve implementation, verification, risk control, or decision clarity.
+
+Evidence, source-access, decision-routing, scope, recommendation, and human-approval guards remain active for every Issue Type.
+
+If required information is missing, mark it Unknown or ask only when needed for the next step. Do not invent it.
 
 ## Acceptance Criteria rules
 
