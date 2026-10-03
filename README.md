@@ -12,23 +12,23 @@ Reusable, evidence-first framework for Product Owners to analyze requirements an
 - Review relevant code paths when code exists.
 - Complete relevant internal evidence discovery before automatic external best-practice research, unless an explicit exception applies.
 - Compare up to three viable solutions and provide a recommendation that still requires human approval.
-- Produce both a readable analysis and a concise Jira story.
+- Route Jira output by Issue Type and produce only the sections useful for that work item.
+- Produce both a readable analysis and a concise Jira-ready issue.
 - Preserve product context isolation and isolate concurrent requirements within the same product.
 
-## Core output
+## Adaptive Jira output
 
-Every final story must include:
-- Simple non-technical summary
-- Current behavior
-- Expected behavior
-- Scope
-- Not in Scope
-- Acceptance Criteria
-- Test Recommendations
-- Technical / Code References
-- Impact & Dependencies
-- Risks / Unknowns
-- Definition of Done
+The Core does not force one fixed template on every Sprint issue. Before Jira output it routes the work item as one of the baseline types:
+- User Story / Feature
+- Bug
+- Technical Debt
+- Spike / Investigation
+- Task
+- Job Story
+
+If the type is clear, the assistant may infer it and state the detected type. If the classification is materially ambiguous, it asks the PO one focused question. The PO can always override it.
+
+Each type has its own relevant baseline sections; irrelevant headings should not be printed.
 
 ## Repository structure
 
@@ -44,4 +44,4 @@ One PO may own multiple products. Each product gets its own **Product Pack**. Pr
 
 ## Version
 
-Current baseline: **v1.0.8**
+Current baseline: **v1.0.9**
