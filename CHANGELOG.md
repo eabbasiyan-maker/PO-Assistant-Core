@@ -1,5 +1,25 @@
 # Changelog
 
+## v1.0.9 — Adaptive Issue Type Templates
+
+### Added
+- Issue Type Router before Jira output.
+- Baseline routing for User Story / Feature, Bug, Technical Debt, Spike / Investigation, Task, and Job Story.
+- Type-specific baseline sections with optional-section omission.
+- PO override when an inferred Issue Type is not the intended work-item type.
+
+### Changed
+- Removed the rule that every final Jira issue must contain the same fixed set of sections.
+- Issue Type is inferred when clear; the PO is asked only when classification is materially ambiguous.
+- Jira output now avoids empty/irrelevant headings while keeping Evidence, Source Access, Decision Routing, Scope, Recommendation, and Human Approval guards active for every type.
+
+### Reason
+Pilot PO feedback showed that one fixed Story template over-prescribed sections for Bugs, Technical Debt, Spikes, Tasks, and Job Stories. The root cause was template rigidity rather than the evidence/decision workflow.
+
+### Compatibility
+This patch changes Jira output routing only. Evidence-first analysis, Source Access Gate, Source Validation, Product/Requirement Isolation, Internal Evidence Completion, External Question Gate, Decision Routing, Scope Expansion, Recommendation Gate, and human decision ownership remain unchanged.
+
+
 ## v1.0.8 — Named External Question gate
 
 ### Added
