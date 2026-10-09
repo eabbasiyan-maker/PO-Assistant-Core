@@ -39,5 +39,5 @@
 
 **Recommendation — requires human approval**
 
-### 8. Final Jira issue
-بعد از کافی بودن Evidence و تصمیم‌ها برای نوع Issue انتخاب‌شده، خروجی مطابق `core/issue-type-routing.md` تولید می‌شود. این مثال یک User Story / Feature است؛ بنابراین Scope، AC، Test Recommendations، validated Code References، Impact، Risk و DoD فقط در صورت مرتبط‌بودن استفاده می‌شوند. برای Bug، Spike، Task و سایر انواع، بخش‌های مناسب همان نوع انتخاب می‌شوند. Proposed Enhancements تأییدنشده وارد Issue نمی‌شوند.
+### 8. Requested output
+در درخواست خام، ساخت Jira Issue صراحتاً خواسته نشده است؛ بنابراین خروجی پیش‌فرض، تحلیل نیاز و Unknownها و تصمیم‌های لازم است، نه Jira Issue اجباری. اگر PO بعداً Jira بخواهد، ابتدا Output Intent و سپس Issue Type مطابق `core/issue-type-routing.md` تعیین می‌شود. نوع User Story / Feature فقط وقتی انتخاب می‌شود که ماهیت نیاز و قصد PO آن را پشتیبانی کند. Proposed Enhancements تأییدنشده وارد Issue نمی‌شوند.
