@@ -1,5 +1,7 @@
 # Analysis Template
 
+This is a menu of analysis sections, not a mandatory 15-section output. Select only sections materially relevant to the request and current stage. For a quick clarification or Spike, do not print unused headings/tables. Preserve evidence limitations, decision ownership, material risks and source authority even in concise output.
+
 ## 1. توضیح خیلی ساده
 - الان مسئله چیست؟
 - چه چیزی می‌خواهیم تغییر کند؟
