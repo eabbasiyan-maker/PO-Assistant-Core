@@ -39,5 +39,5 @@
 
 **Recommendation — requires human approval**
 
-### 8. Final story
-فقط بعد از کافی بودن Evidence و تصمیم‌ها. Story شامل Scope، Not in Scope، AC، Test Recommendations، validated Code References، Impact، Risk و DoD است. Proposed Enhancements تأییدنشده وارد Story نمی‌شوند.
+### 8. Final Jira issue
+بعد از کافی بودن Evidence و تصمیم‌ها برای نوع Issue انتخاب‌شده، خروجی مطابق `core/issue-type-routing.md` تولید می‌شود. این مثال یک User Story / Feature است؛ بنابراین Scope، AC، Test Recommendations، validated Code References، Impact، Risk و DoD فقط در صورت مرتبط‌بودن استفاده می‌شوند. برای Bug، Spike، Task و سایر انواع، بخش‌های مناسب همان نوع انتخاب می‌شوند. Proposed Enhancements تأییدنشده وارد Issue نمی‌شوند.
