@@ -1,12 +1,17 @@
 # Test Recommendation Rules
 
-Test Recommendations are mandatory in the final story.
+Test Recommendations are distinct from Acceptance Criteria and verification/exit criteria.
 
-They are not a duplicate of Acceptance Criteria.
+## Applicability
+Apply `core/issue-type-routing.md` before Jira output.
+- User Story / Feature: include relevant Test Recommendations.
+- Bug: include fix verification and regression recommendations where relevant.
+- Technical Debt: include relevant regression, compatibility and technical verification recommendations.
+- Job Story: include tests when relevant to the desired outcome.
+- Task: use Verification / Done Criteria; add separate tests only if materially useful.
+- Spike / Investigation: use evidence-backed deliverables and Exit Criteria; do not fabricate implementation tests.
 
-## Purpose
-Acceptance Criteria defines what must be true for the story to be accepted.
-Test Recommendations identify valuable ways to prove correctness and discover regressions/failures.
+Never require a generic Test Recommendations heading for every issue. Never omit material verification or regression risks merely to keep output short.
 
 ## Candidate categories
 Use only relevant ones:
@@ -20,11 +25,12 @@ Use only relevant ones:
 - Performance / Load
 - Concurrency
 - Data / DB consistency
-- Retry / idempotency where relevant
+- Retry / idempotency
 - Observability / logging
 
 ## Quality rules
-- make scenarios concrete
-- connect high-risk tests to identified risks
-- avoid generic "test performance/security" lines without context
-- include regression targets when code-path analysis identifies impacted behavior
+- Make scenarios concrete and observable.
+- Link high-risk tests to identified risks.
+- Avoid generic test suggestions.
+- Include regression targets when validated code-path analysis identifies impacted behavior.
+- Do not present unknown behavior as a confirmed expected result.
