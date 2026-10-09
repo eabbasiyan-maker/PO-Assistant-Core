@@ -37,3 +37,21 @@ Keep static rule consistency separate from behavioral PASS.
 - All R01–R10 are BLOCKED for behavioral execution, not FAIL and not PASS.
 - Release gate remains **NOT MET**; do not merge until runtime execution produces evaluated outputs.
 - Required unblock: a callable PO Assistant installation/test harness or actual outputs from the ten prompts, with source context and model/version recorded.
+
+## Dry-run rule-contract check — 2026-10-09
+Method: fetched current branch versions of SKILL.md, core/issue-type-routing.md, core/evidence-policy.md, core/feedback-learning.md, core/test-recommendations.md and templates/jira-story-template.md; evaluated ten scenario-specific rule predicates against the text. No installed Skill was invoked and no generated assistant responses were scored.
+
+| Scenario | Rule-contract check | Behavioral runtime |
+|---|---|---|
+| R01 | STATIC PASS | BLOCKED / NOT RUN |
+| R02 | STATIC PASS | BLOCKED / NOT RUN |
+| R03 | STATIC PASS | BLOCKED / NOT RUN |
+| R04 | STATIC PASS | BLOCKED / NOT RUN |
+| R05 | STATIC PASS | BLOCKED / NOT RUN |
+| R06 | STATIC PASS | BLOCKED / NOT RUN |
+| R07 | STATIC PASS | BLOCKED / NOT RUN |
+| R08 | STATIC PASS | BLOCKED / NOT RUN |
+| R09 | STATIC PASS | BLOCKED / NOT RUN |
+| R10 | STATIC PASS | BLOCKED / NOT RUN |
+
+Result: 10/10 STATIC PASS. This is structural rule coverage, **not** proof of behavioral correctness. Release gate remains NOT MET.
