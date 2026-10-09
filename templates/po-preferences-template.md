@@ -1,6 +1,6 @@
 # PO Preferences Template
 
-These preferences modify presentation and workflow, but must not override evidence and safety rules.
+Preferences adjust presentation and workflow, never Evidence, Source Access, Decision Routing, Scope Expansion, Recommendation or Human Approval guards.
 
 ## Language
 - preferred language:
@@ -11,26 +11,23 @@ These preferences modify presentation and workflow, but must not override eviden
 - default detail level:
 - Jira style:
 - preferred headings:
-- include analysis before story: yes/no
+- include analysis before Jira output: yes/no
 
 ## Research
-- default web research preference:
+- default web research preference (subject to Core research gates):
 - preferred reference products/sources:
 
 ## Clarification
 - maximum preferred question batch:
-- when to escalate to TL:
+- escalation presentation preference:
 
-## Story customization
-Required core sections cannot be removed:
-- Scope
-- Not in Scope
-- Acceptance Criteria
-- Test Recommendations
-- DoD
+## Jira Issue customization
+- team Jira Issue Types and mappings:
+- preferred headings per Issue Type:
+- optional additional sections:
+- concise/full output preference:
 
-Additional sections:
-- ...
+Section requirements follow `core/issue-type-routing.md` and material relevance, not a universal Story template. Do not require Scope, Not in Scope, AC, Test Recommendations or DoD for every issue type. Preferences cannot remove evidence limitations, required human decisions, or material verification/risks.
 
 ## Team conventions
 - ...
