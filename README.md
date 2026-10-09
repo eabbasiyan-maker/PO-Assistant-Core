@@ -1,6 +1,6 @@
 # PO Assistant Core
 
-Reusable, evidence-first framework for Product Owners to analyze requirements and produce implementation-ready Jira stories across multiple products.
+Reusable, evidence-first framework for Product Owners to analyze requirements and, when requested, produce issue-type-appropriate Jira work items across multiple products.
 
 ## Goals
 
