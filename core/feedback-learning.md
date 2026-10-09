@@ -4,7 +4,7 @@
 Correct errors without poisoning reusable knowledge.
 
 ## Workflow
-Wrong output → Root Cause → Correction → Evidence → Human Approval → Approved Learning
+Wrong output → Root Cause → Correction → Evidence Validation → Human Approval → Registry Entry (Approved) → Versioned Source Update → Active Learning
 
 ## Root-cause categories
 - Missing Knowledge
