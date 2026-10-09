@@ -223,8 +223,16 @@ If the gates are not satisfied, present the options neutrally and state what evi
 After all applicable gates are satisfied, provide:
 **Recommendation — requires human approval**
 
-### Step 9 — Route Jira issue type
-Before producing Jira output, apply `core/issue-type-routing.md`.
+### Step 9 — Route requested output (Output Intent Gate)
+Determine the requested deliverable from the PO's explicit request and current stage:
+- **Analysis Only** — provide relevant analysis, evidence, unknowns and decisions; do not append Jira output.
+- **Jira Issue Only** — provide the requested Jira issue using relevant evidence and gates; do not force a separate full analysis report.
+- **Analysis + Jira Issue** — produce both only when explicitly requested or clearly necessary for the PO's stated deliverable.
+
+If the intent is unclear but does not affect the next useful step, provide the smallest useful output without forcing Jira creation. Ask one focused question only when the choice materially changes the deliverable. The PO can change output intent at any time. Output intent never bypasses Evidence, Source, Decision, Scope, Recommendation or Human Approval gates.
+
+### Step 10 — Route Jira issue type
+Only when Jira output is requested, apply `core/issue-type-routing.md`.
 
 - If the issue type is explicit, use it.
 - If it is strongly supported by the requirement, infer it and state the detected type.
@@ -232,11 +240,9 @@ Before producing Jira output, apply `core/issue-type-routing.md`.
 - The PO may override the inferred type at any time.
 - Choose sections based on the issue type and actual need. Do not force irrelevant sections into every issue.
 
-### Step 10 — Produce Analysis output
-Use `templates/analysis-template.md`.
-
-### Step 11 — Produce Jira issue
-Only after analysis is sufficiently complete.
+### Step 11 — Produce requested output
+For Analysis Only or Analysis + Jira Issue, use relevant sections from `templates/analysis-template.md`.
+For Jira Issue Only or Analysis + Jira Issue, produce a Jira issue when sufficient evidence and decisions exist for the requested stage.
 Use `templates/jira-story-template.md` as an adaptive issue template together with `core/issue-type-routing.md`.
 
 ## Adaptive Jira output
