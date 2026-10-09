@@ -44,4 +44,4 @@ One PO may own multiple products. Each product gets its own **Product Pack**. Pr
 
 ## Version
 
-Current baseline: **v1.0.9**
+Current baseline: **v1.0.10**
