@@ -1,5 +1,15 @@
 # Changelog
 
+## v1.0.10 — Issue consistency and source provenance
+
+- Aligned Test Recommendations with adaptive Issue Type routing.
+- Removed universal mandatory Story sections from PO Preferences.
+- Added separate Source Access and Authority dimensions to Product Pack and SKILL.
+- Made Analysis Template a relevance-based menu instead of a mandatory 15-section output.
+- Preserved Evidence, Human Decision, Scope, Recommendation and External Research guards.
+- Deferred workflow stopping criteria and decision persistence changes pending behavior tests.
+
+
 ## v1.0.9 — Adaptive Issue Type Templates
 
 ### Added
