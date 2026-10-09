@@ -1,5 +1,18 @@
 # Changelog
 
+## v1.0.10 — Issue consistency and source provenance (candidate; not yet released)
+
+- Aligned Test Recommendations with adaptive Issue Type routing.
+- Removed universal mandatory Story sections from PO Preferences.
+- Added separate Source Access and Authority dimensions to Product Pack and SKILL.
+- Made Analysis Template a relevance-based menu instead of a mandatory 15-section output.
+- Preserved Evidence, Human Decision, Scope, Recommendation and External Research guards.
+- Added an Output Intent Gate to distinguish Analysis Only, Jira Issue Only, and Analysis + Jira Issue.
+- Added a versioned Approved Learning Registry and feedback record fields; approval alone does not activate learning.
+- Added 10 regression scenarios and documented static rule-contract checks separately from blocked behavioral execution.
+- Deferred workflow stopping criteria pending behavior tests.
+
+
 ## v1.0.9 — Adaptive Issue Type Templates
 
 ### Added

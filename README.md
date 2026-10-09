@@ -1,6 +1,6 @@
 # PO Assistant Core
 
-Reusable, evidence-first framework for Product Owners to analyze requirements and produce implementation-ready Jira stories across multiple products.
+Reusable, evidence-first framework for Product Owners to analyze requirements and, when requested, produce issue-type-appropriate Jira work items across multiple products.
 
 ## Goals
 
@@ -13,7 +13,7 @@ Reusable, evidence-first framework for Product Owners to analyze requirements an
 - Complete relevant internal evidence discovery before automatic external best-practice research, unless an explicit exception applies.
 - Compare up to three viable solutions and provide a recommendation that still requires human approval.
 - Route Jira output by Issue Type and produce only the sections useful for that work item.
-- Produce both a readable analysis and a concise Jira-ready issue.
+- Route output by user intent: analysis only, Jira issue only, or both when requested.
 - Preserve product context isolation and isolate concurrent requirements within the same product.
 
 ## Adaptive Jira output
@@ -44,4 +44,4 @@ One PO may own multiple products. Each product gets its own **Product Pack**. Pr
 
 ## Version
 
-Current baseline: **v1.0.9**
+Released baseline on `main`: **v1.0.9**. Candidate on this branch / PR #2: **v1.0.10** (not yet merged).
