@@ -42,6 +42,8 @@ Each type has its own relevant baseline sections; irrelevant headings should not
 
 One PO may own multiple products. Each product gets its own **Product Pack**. Product knowledge must not leak into another product unless the PO explicitly requests a cross-product comparison.
 
-## Version
+## Distribution and version
 
-Current baseline: **v1.0.9**
+**Core baseline: v1.0.9.** This feature branch also contains **experimental Log Intelligence** rules, tools and synthetic tests; these do not change the approved baseline version or establish production readiness.
+
+For sharing with other Product Owners, start with [START_HERE.md](START_HERE.md). Review [DISTRIBUTION_REVIEW.md](DISTRIBUTION_REVIEW.md) for scope, known limitations and consistency checks. Each PO must create and validate their own Product Pack. A ZIP is a distribution artifact, not automatic agent installation or Jira/GitHub authorization.
