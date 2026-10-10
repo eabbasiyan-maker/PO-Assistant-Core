@@ -43,7 +43,7 @@ Result: PASS / FAIL / BLOCKED / OPEN. Never claim repository-wide coverage from 
 - Separate **file coverage** (inspected/eligible files) from **callsite coverage** (catalogued/total active emitters). Do not derive the second from a partial sample.
 - Enumerate active logger invocations with a comment-aware parser; exclude commented examples, declarations without invocation, DTOs, and appender configuration. Record direct calls, aliases, wrappers, and dynamically dispatched emitters separately.
 - For each callsite, record its exact source line, containing method, condition/exception path, meaning, and what cannot be concluded from its appearance.
-- Reconcile overlapping samples by unique `commit + file + line + logger API` keys before summing; track additions, deletions, and moved lines across versions.
+- Reconcile overlapping samples by unique `repository + commit + path + method + line + invocation` keys before summing; track additions, deletions, and moved lines across versions.
 - Distinguish source-verified emission paths from observed runtime events. A logger call in source is not a behavioral test, and a configured timeout or threshold warning is not proof that a timeout happened.
 - If code search returns zero results, check search authority/index coverage before treating it as an empty inventory. A complete file-tree listing alone does not establish full callsite coverage.
 - Record status per check as PASS / FAIL / BLOCKED / OPEN, with explicit evidence and the next targeted search.
